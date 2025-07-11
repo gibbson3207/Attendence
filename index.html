@@ -1,37 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Smart Attendance System</title>
-  <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <title>Smart Attendance Tracker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="container">
-    <h1>Smart Attendance Tracking System</h1>
-    <form id="attendanceForm">
-      <input type="text" id="studentId" placeholder="Enter Student ID" required />
-      <input type="text" id="studentName" placeholder="Enter Student Name" required />
-      <select id="status">
-        <option value="Present">Present</option>
-        <option value="Absent">Absent</option>
-      </select>
-      <button type="submit">Mark Attendance</button>
-    </form>
+    <h1>Smart Attendance Tracker</h1>
 
-    <h2>Attendance Records</h2>
-    <table id="attendanceTable">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  </div>
+    <div class="form-area">
+        <input type="text" id="courseName" placeholder="Course Name">
+        <input type="text" id="courseCode" placeholder="Course Code">
+        <input type="number" id="numStudents" placeholder="No. of Students" min="1">
+        <button onclick="setupStudentNames()">Start Course</button>
+    </div>
 
-  <script src="script.js"></script>
+    <div id="attendanceForm"></div>
+    <button id="submitBtn" onclick="submitAttendance()" style="display:none">Confirm Submit</button>
+
+    <h2>Saved Attendance Records</h2>
+    <div id="records"></div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
