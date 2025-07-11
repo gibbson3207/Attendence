@@ -1,59 +1,80 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f5f7fa;
-  margin: 0;
-  padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    padding: 20px;
 }
 
-.container {
-  max-width: 600px;
-  margin: auto;
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1, h2 {
-  text-align: center;
-  color: #333;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-input, select, button {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 1em;
+input,
+button {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
 }
 
 button {
-  background-color: #007bff;
-  color: white;
-  cursor: pointer;
-  border: none;
+    background-color: #007BFF;
+    color: white;
+    border: none;
 }
 
 button:hover {
-  background-color: #0056b3;
+    background-color: #0056b3;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
+#attendanceForm {
+    margin-top: 20px;
 }
 
-table, th, td {
-  border: 1px solid #ccc;
-  text-align: center;
+.student-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
-th, td {
-  padding: 10px;
+.student-row span {
+    width: 200px;
+}
+
+.records-box {
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.attendance-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.attendance-table th,
+.attendance-table td {
+    border: 1px solid #aaa;
+    padding: 8px;
+    text-align: center;
+}
+
+.green {
+    color: green;
+    font-weight: bold;
+}
+
+.red {
+    color: red;
+    font-weight: bold;
+}
+
+.attendance-table td button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+}
+
+.attendance-table td button:hover {
+    background-color: #222;
 }
